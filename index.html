@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website - HTML,  CSS & JavaScript</title>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav_links">
+            <div class="left_links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+            </div>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </div>
+        <div class="hamburger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
+
+    <!-- Because I deleted the home ID earlier. Sorry -->
+    <main id="home">
+        <div class="content">
+            <h3>Hi, I'm Shubham Pawar.</h3>
+            <h1>Web Developer & UI/UX Designer</h1>
+            <p> I have currently commplete my Bacholers Degree </p>
+            <p>Proficient in HTML, CSS, JavaScript, Web Design, Web Development and Figma.</p>
+            <a href="#about" class="learn-more">Learn More <span class="symbol">&#x203A</span></a>
+        </div>
+        <!-- the image is too large -->
+        <img src="images/full-size.png" alt="Your Photo">
+    </main>
+    
+    <section id="about">
+        <div class="content">
+            <h1>Web Developer & UI/UX Designer</h1>
+            <p>I have currently commplete my Bacholers Degree</p>
+            <p>Proficient in HTML, CSS, JavaScript, Web Design, Web Development and Figma.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dignissimos voluptatum quasi amet molestias, numquam porro commodi debitis harum earum!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati officiis assumenda exercitationem hic corporis esse nihil veniam? Placeat tempora velit provident distinctio voluptas molestiae accusamus autem sit, consequatur iusto dolores assumenda eligendi amet quidem rem aliquid incidunt voluptatibus, minus excepturi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsam maiores nisi consectetur debitis ad reiciendis quaerat veritatis delectus sed quos asperiores, vel numquam excepturi alias atque obcaecati dolores officia! <a href="#contact">Let's talk.</a></p>
+            <!-- here I also added an a tag which we'll redirect us to the contact page -->
+        </div>
+    </section>
+
+    <section id="work">
+        <h1>This is My projects <br> in future i will add more projects.</h1>
+        <div class="content">
+            <article>
+                <div class="left">
+                    <h2>Project-1</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/pro-2.jpeg" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Project-2</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/customUploadButton.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-3</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/funnyJSgameProject.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-4</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/imageEditor.jpg" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-4</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/liquidTransitionBetweenImages.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-5</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/passwordGenerator.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-6</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/starRating.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>>Project-7</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/themeSwitcher.jpg" alt="">
+            </article>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h1>Let's talk.</h1>
+            <!-- since it is mailto it redirects you to the gmail app (inbox) -->
+            <p>Get in touch via the form below, or by emailing <a href="https://mail.google.com/mail/">shubhampawar5455@gmail.com</a>.</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address:</label>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea placeholder="Enter your message"></textarea>
+                </div>
+                <button type="button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- social links -->
+  
+    
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav_links_container = document.querySelector('.nav_links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('x');
+            nav_links_container.classList.toggle('show_menu');
+        })
+
+        // this will select all the links inside the nav_links
+        const nav_links = document.querySelectorAll('.nav_links a');
+        nav_links.forEach(e => {
+            e.addEventListener('click', () => {
+                hamburger.classList.remove('x');
+                nav_links_container.classList.remove('show_menu');
+            })
+        })
+    </script>
+</body>
+</html>
